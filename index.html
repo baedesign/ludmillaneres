@@ -12,6 +12,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Correção do recorte do carrossel de depoimentos -->
+  <style>
+    .testimonial-viewport {
+      width: 100%;
+      margin-top: 27px;
+      overflow: hidden;
+    }
+
+    .testimonial-viewport .testimonial-track {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    .testimonial-viewport .testimonial-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      min-width: 100%;
+      margin: 0;
+      padding-right: 0;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
   <!--
@@ -213,10 +236,12 @@
         <div class="testimonial-card reveal">
           <span class="quote-icon icon" data-icon="quote"></span>
           <!-- EDITE AQUI: depoimentos. Cada figure é um depoimento. -->
-          <div class="testimonial-track" id="testimonial-track">
-            <figure class="testimonial-slide"><blockquote>Espaço reservado para o depoimento de um paciente. Um relato breve sobre a experiência no processo terapêutico e o que mudou ao longo dos encontros.</blockquote><figcaption><strong>Depoimento em breve</strong><span>Paciente · Online</span></figcaption></figure>
-            <figure class="testimonial-slide"><blockquote>Espaço reservado para o depoimento de um paciente. Aqui pode entrar uma fala sobre o acolhimento na primeira sessão e a sensação de ser ouvida sem julgamentos.</blockquote><figcaption><strong>Depoimento em breve</strong><span>Paciente · Presencial</span></figcaption></figure>
-            <figure class="testimonial-slide"><blockquote>Espaço reservado para o depoimento de um paciente. Um comentário sobre a evolução no manejo da ansiedade e a retomada da rotina com mais leveza.</blockquote><figcaption><strong>Depoimento em breve</strong><span>Paciente · Online</span></figcaption></figure>
+          <div class="testimonial-viewport">
+            <div class="testimonial-track" id="testimonial-track">
+              <figure class="testimonial-slide"><blockquote>Espaço reservado para o depoimento de um paciente. Um relato breve sobre a experiência no processo terapêutico e o que mudou ao longo dos encontros.</blockquote><figcaption><strong>Depoimento em breve</strong><span>Paciente · Online</span></figcaption></figure>
+              <figure class="testimonial-slide"><blockquote>Espaço reservado para o depoimento de um paciente. Aqui pode entrar uma fala sobre o acolhimento na primeira sessão e a sensação de ser ouvida sem julgamentos.</blockquote><figcaption><strong>Depoimento em breve</strong><span>Paciente · Presencial</span></figcaption></figure>
+              <figure class="testimonial-slide"><blockquote>Espaço reservado para o depoimento de um paciente. Um comentário sobre a evolução no manejo da ansiedade e a retomada da rotina com mais leveza.</blockquote><figcaption><strong>Depoimento em breve</strong><span>Paciente · Online</span></figcaption></figure>
+            </div>
           </div>
           <div class="testimonial-controls">
             <div class="testimonial-dots" id="testimonial-dots"></div>
